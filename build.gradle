@@ -1,0 +1,51 @@
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        //classpath "ca.bulltech.gradle.plugin:deps:1.0"
+    }
+}
+group 'ca.bulltech.test'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+//apply plugin: 'ca.bulltech.gradle.plugin.deps'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    myConfiguration
+
+}
+
+/*
+depGroups {
+    foo("abc", "123") {
+        implementation "foo", "bar"
+    }
+
+    abc("abc", "321") {
+        compile "abc"
+    }
+}
+*/
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    //depGroups "foo", "abc"
+
+}
+
+/*depGroups {
+    foo("google", "guava") {
+         ""
+    }
+}*/
+
